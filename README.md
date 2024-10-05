@@ -1,3 +1,7 @@
+# Experimental module-based implementation for OSPS version 12
+
+This branch contains an experimental implementation of the pregnancy model as extension modules utilizing the modularization concept implemented in Version 12 of the OSP software. As the software is still in development, this implementation cannot be considered as a final one.
+
 # Physiologically Based Pharmacokinetic Models for Pregnancy
 
 Within this repository, we distribute the physiologically-based whole-body models for pregnant individuals published in [[1,2,3,4,5,6,7](#references)]. Additionally, this repository contains the refined passive transports building block which was used to build pregnancy PBPK models with different unbound drug fractions in maternal and fetal organism as described in [[8](#references)] as well as the *in silico* cotyledon perfusion model presented in [[9](#references)].
@@ -20,9 +24,7 @@ The pregnancy PBPK models published in [[1,2,3,4,5,6,7](#references)] are provid
   * _Dolutegravir_ and _raltegravir_ model evaluation is described in [[5](#references)]
   * _Acetaminophen_ model evaluation is described in [[6,7,9](#references)]
 
-The subfolder *BuildingBlocks* contains the MoBi<sup>®</sup> building blocks for spatial structure and passive transports in pregnant individuals. Those building blocks can be used in MoBi<sup>®</sup> to build new substance models (see below). 
-
-Note that the building block `PassiveTransport_PregnantWoman.pkml` includes the drug's fraction unbound as global parameter for both the maternal and fetal organism, i.e. differential protein binding in mother and fetus cannot be modeled with this building block.
+The subfolder *Moduels* contains the MoBi<sup>®</sup> enxtension modules that can be used with PBPK models created in PK-Sim<sup>®</sup> version 12.
 
 ### Accounting for different unbound drug fractions in maternal and fetal compartments
 
@@ -52,12 +54,8 @@ Steps 3 to 5 are performed in PK-Sim<sup>®</sup>.
 4. Create a pregnancy population with the required settings based on the individual above
 5. Import (MoBi<sup>®</sup>) pregnancy model in `pkml` format and combine it with created population building block as described in the [OSP Suite manual](https://github.com/Open-Systems-Pharmacology/OSPSuite.Documentation/blob/master/Open%20Systems%20Pharmacology%20Suite.pdf) (**Ch. 21.2 Importing Individual and Population Simulation**)
 
-### How to create a new pregnancy model
-The procedure is described in a comprehensive [tutorial](https://doi.org/10.1002/psp4.12300).
-
-
 ## Version information
-The physiology is based on the PBPK model implemented in PK-Sim<sup>®</sup> version 6.0. The MoBi<sup>®</sup> project files were created in version 6.0.
+The physiology is based on the PBPK model implemented in PK-Sim<sup>®</sup> version 12.0. The MoBi<sup>®</sup> project files were created in version 12.0.
 
 ## Code of conduct
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct).
